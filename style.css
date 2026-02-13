@@ -41,21 +41,16 @@ body {
 }
 
 .letter-window {
-  background: url("window.png") no-repeat center;
-  background-size: contain;
-  width: 100%;
-  max-width: 800px;
-  aspect-ratio: 1/1;
-  padding: 40px 20px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  transform: scale(1);
+  opacity: 1;
 }
 
 h1 {
-  font-size: clamp(18px, 4vw, 26px);
-  margin-bottom: 15px;
+  font-size: 30px;
+  margin: 0;
+}
+p {
+  font-size: 40px;
 }
 
 .cat {
@@ -72,7 +67,7 @@ h1 {
 }
 
 .btn {
-  width: 100px;
+  width: 120px;
   max-width: 30vw;
   cursor: pointer;
   user-select: none;
