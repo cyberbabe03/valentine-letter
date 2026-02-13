@@ -46,7 +46,7 @@ body {
   width: 90%;
   max-width: 500px;
   aspect-ratio: 1/1;
-  padding: 40px 20px;
+  padding: 110px 40px 20px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -59,8 +59,8 @@ h1 {
 }
 
 .cat {
-  width: 120px;
-  max-width: 40%;
+  width: 100px;
+  max-width: 30%;
   margin-bottom: 15px;
 }
 
@@ -72,7 +72,7 @@ h1 {
 }
 
 .btn {
-  width: 100px;
+  width: 50px;
   max-width: 30vw;
   cursor: pointer;
   user-select: none;
