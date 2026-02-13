@@ -42,16 +42,15 @@ body {
 
 .letter-window {
   background: url("window.png") no-repeat center;
-  background-size: full;
-  width: 100%;
-  max-width: 550px;
-  min-height: 400px;
-  padding: 60px 40px;
+  background-size: contain;
+  width: 90%;
+  max-width: 500px;
+  aspect-ratio: 1/1;
+  padding: 40px 20px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-}
 
 h1 {
   font-size: clamp(18px, 4vw, 26px);
