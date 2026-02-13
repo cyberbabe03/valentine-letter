@@ -43,7 +43,7 @@ body {
 .letter-window {
   background: url("window.png") no-repeat center;
   background-size: contain;
-  width: 100%;
+  width: 90%;
   max-width: 500px;
   aspect-ratio: 1/1;
   padding: 40px 20px;
