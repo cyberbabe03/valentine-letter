@@ -41,8 +41,16 @@ body {
 }
 
 .letter-window {
-  transform: scale(1);
-  opacity: 1;
+  background: url("window.png") no-repeat center;
+  background-size: contain;
+  width: 100%;
+  max-width: 500px;
+  aspect-ratio: 1/1;
+  padding: 40px 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 h1 {
