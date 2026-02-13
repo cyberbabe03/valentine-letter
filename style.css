@@ -8,12 +8,10 @@
 body {
   min-height: 100vh;
   background: url("heart-bg.jpg") repeat;
-  background-size: 200px; /* تصغير حجم القلوب في الخلفية لتبدو أجمل */
   display: flex;
   justify-content: center;
   align-items: center;
   text-align: center;
-  padding: 20px; /* مسافة أمان للحواف في الجوال */
 }
 
 /* Envelope Screen */
@@ -25,11 +23,14 @@ body {
 }
 
 #envelope {
-  width: 200px; /* تكبير المغلف قليلاً */
-  max-width: 60vw;
+  width: 150px;
+  max-width: 40vw;
 }
 
-
+#envelope-container p {
+  margin-top: 10px;
+  font-size: 18px;
+}
 
 /* Letter Screen */
 #letter-container {
@@ -37,73 +38,51 @@ body {
   justify-content: center;
   align-items: center;
   width: 100%;
-  padding: 20px 0; /* مساحة إضافية للجوال */
 }
 
 .letter-window {
   background: url("window.png") no-repeat center;
-  background-size: 100% 100%; /* لضمان تمدد الخلفية مع الطول */
+  background-size: contain;
   width: 90%;
   max-width: 500px;
-  
-  /* جعل الطول مرن (Responsive) */
-  min-height: 400px; 
-  height: auto; 
-  
-  /* حواف داخلية كبيرة لضمان ظهور المحتوى داخل إطار الصورة */
-  padding: 60px 30px; 
-  
+  aspect-ratio: 1/1;
+  padding: 40px 20px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  box-sizing: border-box; /* يضمن أن الـ padding لا يخرب العرض */
-  transition: all 0.3s ease;
 }
 
 h1 {
-  font-size: clamp(16px, 5vw, 24px); /* خط مرن يصغر في الجوال ويكبر في اللابتوب */
+  font-size: clamp(18px, 4vw, 26px);
   margin-bottom: 15px;
-  width: 80%; /* لضمان عدم خروج النص عن الإطار الوردي */
 }
 
 .cat {
-  width: 140px; 
-  max-width: 50%;
-  height: auto;
+  width: 120px;
+  max-width: 40%;
   margin-bottom: 15px;
 }
 
 .buttons {
   display: flex;
   justify-content: center;
-  gap: 20px;
+  gap: 25px;
   position: relative;
-  width: 100%;
 }
 
 .btn {
-  width: 90px;
-  max-width: 25vw;
+  width: 100px;
+  max-width: 30vw;
   cursor: pointer;
   user-select: none;
 }
 
-.final-text {
-  margin-top: 20px;
-  font-size: clamp(14px, 4vw, 18px);
-  line-height: 1.5;
-  width: 85%;
+.no-wrapper {
+  position: relative;
 }
 
-/* تعديلات خاصة للجوال فقط */
-@media (max-width: 480px) {
-  .letter-window {
-    padding: 40px 20px;
-    min-height: 300px;
-  }
-  
-  .buttons {
-    gap: 10px;
-  }
+.final-text {
+  margin-top: 15px;
+  font-size: clamp(14px, 3.5vw, 18px);
 }
