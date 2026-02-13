@@ -29,62 +29,71 @@ body {
   max-width: 60vw;
 }
 
+
+
 /* Letter Screen */
 #letter-container {
   display: none;
   justify-content: center;
   align-items: center;
   width: 100%;
+  padding: 20px 0; /* مساحة إضافية للجوال */
 }
 
 .letter-window {
   background: url("window.png") no-repeat center;
-  /* تغيير contain إلى 100% 100% ليتمط الإطار مع طول النص */
-  background-size: 100% 100%; 
-  width: 100%;
-  max-width: 450px;
-  /* حذفنا aspect-ratio لأنه يسبب مشاكل في الجوال */
-  min-height: 350px; 
-  padding: 50px 30px; /* توزيع المساحة داخل النافذة */
+  background-size: 100% 100%; /* لضمان تمدد الخلفية مع الطول */
+  width: 90%;
+  max-width: 500px;
+  
+  /* جعل الطول مرن (Responsive) */
+  min-height: 400px; 
+  height: auto; 
+  
+  /* حواف داخلية كبيرة لضمان ظهور المحتوى داخل إطار الصورة */
+  padding: 60px 30px; 
+  
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  position: relative;
+  box-sizing: border-box; /* يضمن أن الـ padding لا يخرب العرض */
+  transition: all 0.3s ease;
 }
 
 h1 {
-  font-size: clamp(16px, 5vw, 24px); /* خط مرن حسب حجم الشاشة */
+  font-size: clamp(16px, 5vw, 24px); /* خط مرن يصغر في الجوال ويكبر في اللابتوب */
   margin-bottom: 15px;
-  width: 80%; /* لضمان عدم ملامسة النص للحواف */
+  width: 80%; /* لضمان عدم خروج النص عن الإطار الوردي */
 }
 
 .cat {
-  width: 100px;
-  max-width: 35%;
+  width: 140px; 
+  max-width: 50%;
+  height: auto;
   margin-bottom: 15px;
 }
 
 .buttons {
   display: flex;
   justify-content: center;
-  gap: 15px;
+  gap: 20px;
   position: relative;
   width: 100%;
 }
 
 .btn {
-  width: 80px;
+  width: 90px;
   max-width: 25vw;
   cursor: pointer;
-  transition: transform 0.2s;
+  user-select: none;
 }
 
 .final-text {
-  margin-top: 10px;
+  margin-top: 20px;
   font-size: clamp(14px, 4vw, 18px);
-  line-height: 1.4;
-  padding: 0 10px;
+  line-height: 1.5;
+  width: 85%;
 }
 
 /* تعديلات خاصة للجوال فقط */
