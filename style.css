@@ -1,1 +1,89 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Pixelify Sans", sans-serif;
+}
+
+body {
+  min-height: 100vh;
+  background: url("heart-bg.jpg") repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+/* Envelope Screen */
+#envelope-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  cursor: pointer;
+}
+
+#envelope {
+  width: 150px;
+  max-width: 40vw;
+}
+
+#envelope-container p {
+  margin-top: 10px;
+  font-size: 18px;
+}
+
+/* Letter Screen */
+#letter-container {
+  display: none;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.letter-window {
+  background: url("window.png") no-repeat center;
+  background-size: contain;
+  width: 100%;
+  max-width: 500px;
+  aspect-ratio: 1/1;
+  padding: 40px 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+h1 {
+  font-size: clamp(18px, 4vw, 26px);
+  margin-bottom: 15px;
+}
+
+.cat {
+  width: 120px;
+  max-width: 40%;
+  margin-bottom: 15px;
+}
+
+.buttons {
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  position: relative;
+}
+
+.btn {
+  width: 100px;
+  max-width: 30vw;
+  cursor: pointer;
+  user-select: none;
+}
+
+.no-wrapper {
+  position: relative;
+}
+
+.final-text {
+  margin-top: 15px;
+  font-size: clamp(14px, 3.5vw, 18px);
+}
 
